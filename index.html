@@ -10,10 +10,31 @@ table {
 }
 </style>
 <body bgcolor='beige'>
+<table border=0>
+	<tr><td>
+		&nbsp;&nbsp;<a href="index.html" title="Home"><img src="Pics/Home.png" height=60> Home</a><p>
+		&nbsp;&nbsp;<a href="Birthdays.html" title="Birthdays"><img src="Pics/Birthday.png" height=60> Birthdays</a><p>
+		&nbsp;&nbsp;<a href="Rota.html" title="Rota"><img src="Pics/Rota.png" height=60> Rota</a><p>
+	</td>
+		<td>&nbsp;</td>
+	<td>&nbsp;<span id="current-date"></span>
+	</td></tr>
+</table>
 
-&nbsp;&nbsp;<a href="index.html" title="Home"><img src="Pics/Home.png" height=60> Home</a><p>
-&nbsp;&nbsp;<a href="Birthdays.html" title="Birthdays"><img src="Pics/Birthday.png" height=60> Birthdays</a><p>
-&nbsp;&nbsp;<a href="Rota.html" title="Rota"><img src="Pics/Rota.png" height=60> Rota</a><p>
+  <script>
+    // Get current date
+    const today = new Date();
 
+    // Format the date (e.g., "October 5, 2026")
+    const formattedDate = today.toLocaleDateString('en-UK', {
+      day: 'numeric',
+	  month: 'long',
+	  year: 'numeric'
+    });
+
+    // Insert the formatted date into the HTML element
+    document.getElementById('current-date').textContent = formattedDate;
+  </script>
+  
 </body>
 </html>
